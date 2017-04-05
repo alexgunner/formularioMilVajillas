@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        reserva:
+          attributes:
+            nombre:
+              blank: "No puede estar vacío"
+              too_short: "es muy corto, necesitas ingresar por lo menos 3 caracteres"
+              too_long: "es muy largo, no puedes ingresar más de 50 caracteres"
+            telefono:
+              blank: "No puede estar vacío"
+              too_short: "es muy corto, necesitas ingresar por lo menos 7 números"
+              too_long: "es muy largo, no puedes ingresar más de 10 números"
+              not_a_number: "solo pueden ser números"
+            correo:
+              blank: "No puede estar vacío"
+              too_short: "es muy corto, necesitas ingresar por lo menos 6 caracteres"
+              too_long: "es muy largo, no puedes ingresar más de 50 caracteres"
+              invalid: "no es válido, por favor ingresa un correo válido"
+            direccion:
+              blank: "No puede estar vacío"
+              too_short: "es muy corto, necesitas ingresar por lo menos 10 caracteres"
+              too_long: "es muy largo, no puedes ingresar más de 400 caracteres"

@@ -1,19 +1,35 @@
 <div style="font-size: 10px;">
 <%= bootstrap_form_for(reserva) do |f| %>
+
+  <% if reserva.errors.any? %>
+    <div id="error_explanation">
+      <% if reserva.errors.count == 1 %>
+        <h2><%= pluralize(reserva.errors.count, "error") %> no te permite enviar este pedido:</h2>
+      <% else %>
+        <h2><%= pluralize(reserva.errors.count, "errores") %> no te permiten enviar este pedido:</h2>
+      <% end %>
+      <ul>
+      <% reserva.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="field">
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, label: "Nombre Completo" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :telefono %>
+    <%= f.text_field :telefono, label: "Teléfono" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :correo %>
+    <%= f.text_field :correo, label: "Correo Electrónico" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :direccion %>
+    <%= f.text_field :direccion, label: "Dirección" %>
   </div>
 
   <h3>Reserva de items</h3>
