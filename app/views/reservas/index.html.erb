@@ -1,0 +1,193 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reservas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Telefono</th>
+      <th>Correo</th>
+      <th>Direccion</th>
+      <th>Sillas plastica</th>
+      <th>Cubresillas con mona</th>
+      <th>Mesas rectangulares 10 personas</th>
+      <th>Manteles rectangulares 10 personas</th>
+      <th>Sobremanteles rectangulares 10 personas</th>
+      <th>Mesas redondas 10 personas</th>
+      <th>Manteles redondos 10 personas</th>
+      <th>Sobremanteles redondos 10 personas</th>
+      <th>Mesas redondas 8 personas</th>
+      <th>Manteles redondos 8 personas</th>
+      <th>Sobremanteles rectangulares 8 personas</th>
+      <th>Mesas rectangulares 6 personas</th>
+      <th>Manteles rectangulares 6 personas</th>
+      <th>Sobremanteles rectangulares</th>
+      <th>Servilletas</th>
+      <th>Mesas de plastico 4 personas</th>
+      <th>Manteles 4 personas</th>
+      <th>Mesa de novios</th>
+      <th>Mesa para torta</th>
+      <th>Mesitas de nino 8 ninos</th>
+      <th>Mantelitos</th>
+      <th>Sillitas de ninos</th>
+      <th>Mesita de ninos 4 ninos</th>
+      <th>Sombrillas</th>
+      <th>Toldos 12x8</th>
+      <th>Toldos 8x8</th>
+      <th>Toldos 5x8</th>
+      <th>Toldos 3x5</th>
+      <th>Toldos 2x4</th>
+      <th>Alfombra roja</th>
+      <th>Tarimas</th>
+      <th>Parrillas grandes</th>
+      <th>Parrillas pequenas</th>
+      <th>Garzones</th>
+      <th>Carroza</th>
+      <th>Juegos inflables</th>
+      <th>Copas champagneras</th>
+      <th>Copas vino blanco</th>
+      <th>Copas vino tinto</th>
+      <th>Copas agua</th>
+      <th>Vasos cerveceros</th>
+      <th>Vasos largos</th>
+      <th>Vasos para whisky</th>
+      <th>Vasos cockteleros</th>
+      <th>Ceniceros</th>
+      <th>Hieleras con pinzas</th>
+      <th>Jarras grandes</th>
+      <th>Jarras medianas</th>
+      <th>Jarras pequenas</th>
+      <th>Charolas rectangulares</th>
+      <th>Charolas redondas</th>
+      <th>Charolitas</th>
+      <th>Platos hondos normales</th>
+      <th>Platos planos normales</th>
+      <th>Platos hondos frances</th>
+      <th>Platos planos frances</th>
+      <th>Platos base frances</th>
+      <th>Platillos frances</th>
+      <th>Platillos para saladitos</th>
+      <th>Pescaderas</th>
+      <th>Tenedores y cuchillos</th>
+      <th>Cucharas</th>
+      <th>Cucharillas</th>
+      <th>Tenedor torta</th>
+      <th>Pirex</th>
+      <th>Piezas para carne o ensalada</th>
+      <th>Cucharas grandes</th>
+      <th>Calentadores de comida</th>
+      <th>Tazas con platillos</th>
+      <th>Teteras</th>
+      <th>Azucareros</th>
+      <th>Espatula para torta</th>
+      <th>Calentador de ambiente</th>
+      <th>Fuentes para bocaditos</th>
+      <th>Fuentes para bufet</th>
+      <th>Toldo 16x8</th>
+      <th>Laterales por metro</th>
+      <th>Porta cockey de cristal</th>
+      <th>Mesa de niños con sillitas hiani y mantel para 10 ninos</th>
+      <th>Mesa alta de bar con 4 sillas giratorias</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservas.each do |reserva| %>
+      <tr>
+        <td><%= reserva.nombre %></td>
+        <td><%= reserva.telefono %></td>
+        <td><%= reserva.correo %></td>
+        <td><%= reserva.direccion %></td>
+        <td><%= reserva.sillas_plastica %></td>
+        <td><%= reserva.cubresillas_con_mona %></td>
+        <td><%= reserva.mesas_rectangulares_10_personas %></td>
+        <td><%= reserva.manteles_rectangulares_10_personas %></td>
+        <td><%= reserva.sobremanteles_rectangulares_10_personas %></td>
+        <td><%= reserva.mesas_redondas_10_personas %></td>
+        <td><%= reserva.manteles_redondos_10_personas %></td>
+        <td><%= reserva.sobremanteles_redondos_10_personas %></td>
+        <td><%= reserva.mesas_redondas_8_personas %></td>
+        <td><%= reserva.manteles_redondos_8_personas %></td>
+        <td><%= reserva.sobremanteles_rectangulares_8_personas %></td>
+        <td><%= reserva.mesas_rectangulares_6_personas %></td>
+        <td><%= reserva.manteles_rectangulares_6_personas %></td>
+        <td><%= reserva.sobremanteles_rectangulares %></td>
+        <td><%= reserva.servilletas %></td>
+        <td><%= reserva.mesas_de_plastico_4_personas %></td>
+        <td><%= reserva.manteles_4_personas %></td>
+        <td><%= reserva.mesa_de_novios %></td>
+        <td><%= reserva.mesa_para_torta %></td>
+        <td><%= reserva.mesitas_de_nino_8_ninos %></td>
+        <td><%= reserva.mantelitos %></td>
+        <td><%= reserva.sillitas_de_ninos %></td>
+        <td><%= reserva.mesita_de_ninos_4_ninos %></td>
+        <td><%= reserva.sombrillas %></td>
+        <td><%= reserva.toldos_12x8 %></td>
+        <td><%= reserva.toldos_8x8 %></td>
+        <td><%= reserva.toldos_5x8 %></td>
+        <td><%= reserva.toldos_3x5 %></td>
+        <td><%= reserva.toldos_2x4 %></td>
+        <td><%= reserva.alfombra_roja %></td>
+        <td><%= reserva.tarimas %></td>
+        <td><%= reserva.parrillas_grandes %></td>
+        <td><%= reserva.parrillas_pequenas %></td>
+        <td><%= reserva.garzones %></td>
+        <td><%= reserva.carroza %></td>
+        <td><%= reserva.juegos_inflables %></td>
+        <td><%= reserva.copas_champagneras %></td>
+        <td><%= reserva.copas_vino_blanco %></td>
+        <td><%= reserva.copas_vino_tinto %></td>
+        <td><%= reserva.copas_agua %></td>
+        <td><%= reserva.vasos_cerveceros %></td>
+        <td><%= reserva.vasos_largos %></td>
+        <td><%= reserva.vasos_para_whisky %></td>
+        <td><%= reserva.vasos_cockteleros %></td>
+        <td><%= reserva.ceniceros %></td>
+        <td><%= reserva.hieleras_con_pinzas %></td>
+        <td><%= reserva.jarras_grandes %></td>
+        <td><%= reserva.jarras_medianas %></td>
+        <td><%= reserva.jarras_pequenas %></td>
+        <td><%= reserva.charolas_rectangulares %></td>
+        <td><%= reserva.charolas_redondas %></td>
+        <td><%= reserva.charolitas %></td>
+        <td><%= reserva.platos_hondos_normales %></td>
+        <td><%= reserva.platos_planos_normales %></td>
+        <td><%= reserva.platos_hondos_frances %></td>
+        <td><%= reserva.platos_planos_frances %></td>
+        <td><%= reserva.platos_base_frances %></td>
+        <td><%= reserva.platillos_frances %></td>
+        <td><%= reserva.platillos_para_saladitos %></td>
+        <td><%= reserva.pescaderas %></td>
+        <td><%= reserva.tenedores_y_cuchillos %></td>
+        <td><%= reserva.cucharas %></td>
+        <td><%= reserva.cucharillas %></td>
+        <td><%= reserva.tenedor_torta %></td>
+        <td><%= reserva.pirex %></td>
+        <td><%= reserva.piezas_para_carne_o_ensalada %></td>
+        <td><%= reserva.cucharas_grandes %></td>
+        <td><%= reserva.calentadores_de_comida %></td>
+        <td><%= reserva.tazas_con_platillos %></td>
+        <td><%= reserva.teteras %></td>
+        <td><%= reserva.azucareros %></td>
+        <td><%= reserva.espatula_para_torta %></td>
+        <td><%= reserva.calentador_de_ambiente %></td>
+        <td><%= reserva.fuentes_para_bocaditos %></td>
+        <td><%= reserva.fuentes_para_bufet %></td>
+        <td><%= reserva.toldo_16x8 %></td>
+        <td><%= reserva.laterales_por_metro %></td>
+        <td><%= reserva.porta_cockey_de_cristal %></td>
+        <td><%= reserva.mesa_de_niños_con_sillitas_hiani_y_mantel_para_10_ninos %></td>
+        <td><%= reserva.mesa_alta_de_bar_con_4_sillas_giratorias %></td>
+        <td><%= link_to 'Show', reserva %></td>
+        <td><%= link_to 'Edit', edit_reserva_path(reserva) %></td>
+        <td><%= link_to 'Destroy', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserva', new_reserva_path %>
