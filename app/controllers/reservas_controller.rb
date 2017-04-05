@@ -12,6 +12,9 @@ class ReservasController < ApplicationController
   def show
   end
 
+  def gracias
+  end
+
   # GET /reservas/new
   def new
     @reserva = Reserva.new
@@ -29,7 +32,7 @@ class ReservasController < ApplicationController
     respond_to do |format|
       if @reserva.save
         FormMailer.form_mail(@reserva).deliver
-        format.html { redirect_to @reserva, notice: 'Reserva was successfully created.' }
+        format.html { redirect_to "/gracias", notice: 'La reserva fue creada.' }
         format.json { render :show, status: :created, location: @reserva }
       else
         format.html { render :new }
