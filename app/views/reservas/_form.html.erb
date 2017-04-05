@@ -1,437 +1,403 @@
-<%= form_for(reserva) do |f| %>
-  <% if reserva.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(reserva.errors.count, "error") %> prohibited this reserva from being saved:</h2>
-
-      <ul>
-      <% reserva.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= bootstrap_form_for(reserva) do |f| %>
   <div class="field">
-    <%= f.label :nombre %>
     <%= f.text_field :nombre %>
   </div>
 
   <div class="field">
-    <%= f.label :telefono %>
     <%= f.text_field :telefono %>
   </div>
 
   <div class="field">
-    <%= f.label :correo %>
     <%= f.text_field :correo %>
   </div>
 
   <div class="field">
-    <%= f.label :direccion %>
     <%= f.text_field :direccion %>
   </div>
 
-  <div class="field">
-    <%= f.label :sillas_plastica %>
-    <%= f.number_field :sillas_plastica %>
-  </div>
+  <h3>Reserva de items</h3>
 
-  <div class="field">
-    <%= f.label :cubresillas_con_mona %>
-    <%= f.number_field :cubresillas_con_mona %>
-  </div>
+  <br><br>
 
-  <div class="field">
-    <%= f.label :mesas_rectangulares_10_personas %>
-    <%= f.number_field :mesas_rectangulares_10_personas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :sillas_plastica %>
+    </div>
 
-  <div class="field">
-    <%= f.label :manteles_rectangulares_10_personas %>
-    <%= f.number_field :manteles_rectangulares_10_personas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :cubresillas_con_mona %>
+    </div>
 
-  <div class="field">
-    <%= f.label :sobremanteles_rectangulares_10_personas %>
-    <%= f.number_field :sobremanteles_rectangulares_10_personas %>
+    <div class="col-lg-3">
+      <%= f.number_field :mesas_rectangulares_10_personas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :mesas_redondas_10_personas %>
-    <%= f.number_field :mesas_redondas_10_personas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :manteles_rectangulares_10_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :manteles_redondos_10_personas %>
-    <%= f.number_field :manteles_redondos_10_personas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :sobremanteles_rectangulares_10_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :sobremanteles_redondos_10_personas %>
-    <%= f.number_field :sobremanteles_redondos_10_personas %>
+    <div class="col-lg-3">
+      <%= f.number_field :mesas_redondas_10_personas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :mesas_redondas_8_personas %>
-    <%= f.number_field :mesas_redondas_8_personas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :manteles_redondos_10_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :manteles_redondos_8_personas %>
-    <%= f.number_field :manteles_redondos_8_personas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :sobremanteles_redondos_10_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :sobremanteles_rectangulares_8_personas %>
-    <%= f.number_field :sobremanteles_rectangulares_8_personas %>
+    <div class="col-lg-3">
+      <%= f.number_field :mesas_redondas_8_personas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :mesas_rectangulares_6_personas %>
-    <%= f.number_field :mesas_rectangulares_6_personas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :manteles_redondos_8_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :manteles_rectangulares_6_personas %>
-    <%= f.number_field :manteles_rectangulares_6_personas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :sobremanteles_rectangulares_8_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :sobremanteles_rectangulares %>
-    <%= f.number_field :sobremanteles_rectangulares %>
+    <div class="col-lg-3">
+      <%= f.number_field :mesas_rectangulares_6_personas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :servilletas %>
-    <%= f.number_field :servilletas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :manteles_rectangulares_6_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mesas_de_plastico_4_personas %>
-    <%= f.number_field :mesas_de_plastico_4_personas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :sobremanteles_rectangulares %>
+    </div>
 
-  <div class="field">
-    <%= f.label :manteles_4_personas %>
-    <%= f.number_field :manteles_4_personas %>
+    <div class="col-lg-3">
+      <%= f.number_field :servilletas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :mesa_de_novios %>
-    <%= f.number_field :mesa_de_novios %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :mesas_de_plastico_4_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mesa_para_torta %>
-    <%= f.number_field :mesa_para_torta %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :manteles_4_personas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mesitas_de_nino_8_ninos %>
-    <%= f.number_field :mesitas_de_nino_8_ninos %>
+    <div class="col-lg-3">
+      <%= f.number_field :mesa_de_novios %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :mantelitos %>
-    <%= f.number_field :mantelitos %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :mesa_para_torta %>
+    </div>
 
-  <div class="field">
-    <%= f.label :sillitas_de_ninos %>
-    <%= f.number_field :sillitas_de_ninos %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :mesitas_de_nino_8_ninos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mesita_de_ninos_4_ninos %>
-    <%= f.number_field :mesita_de_ninos_4_ninos %>
+    <div class="col-lg-3">
+      <%= f.number_field :mantelitos %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :sombrillas %>
-    <%= f.number_field :sombrillas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :sillitas_de_ninos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :toldos_12x8 %>
-    <%= f.number_field :toldos_12x8 %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :mesita_de_ninos_4_ninos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :toldos_8x8 %>
-    <%= f.number_field :toldos_8x8 %>
+    <div class="col-lg-3">
+      <%= f.number_field :sombrillas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :toldos_5x8 %>
-    <%= f.number_field :toldos_5x8 %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :toldos_12x8 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :toldos_3x5 %>
-    <%= f.number_field :toldos_3x5 %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :toldos_8x8 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :toldos_2x4 %>
-    <%= f.number_field :toldos_2x4 %>
+    <div class="col-lg-3">
+      <%= f.number_field :toldos_5x8 %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :alfombra_roja %>
-    <%= f.number_field :alfombra_roja %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :toldos_3x5 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :tarimas %>
-    <%= f.number_field :tarimas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :toldos_2x4 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :parrillas_grandes %>
-    <%= f.number_field :parrillas_grandes %>
+    <div class="col-lg-3">
+      <%= f.number_field :alfombra_roja %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :parrillas_pequenas %>
-    <%= f.number_field :parrillas_pequenas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :tarimas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :garzones %>
-    <%= f.number_field :garzones %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :parrillas_grandes %>
+    </div>
 
-  <div class="field">
-    <%= f.label :carroza %>
-    <%= f.number_field :carroza %>
+    <div class="col-lg-3">
+      <%= f.number_field :parrillas_pequenas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :juegos_inflables %>
-    <%= f.number_field :juegos_inflables %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :garzones %>
+    </div>
 
-  <div class="field">
-    <%= f.label :copas_champagneras %>
-    <%= f.number_field :copas_champagneras %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :carroza %>
+    </div>
 
-  <div class="field">
-    <%= f.label :copas_vino_blanco %>
-    <%= f.number_field :copas_vino_blanco %>
+    <div class="col-lg-3">
+      <%= f.number_field :juegos_inflables %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :copas_vino_tinto %>
-    <%= f.number_field :copas_vino_tinto %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :copas_champagneras %>
+    </div>
 
-  <div class="field">
-    <%= f.label :copas_agua %>
-    <%= f.number_field :copas_agua %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :copas_vino_blanco %>
+    </div>
 
-  <div class="field">
-    <%= f.label :vasos_cerveceros %>
-    <%= f.number_field :vasos_cerveceros %>
+    <div class="col-lg-3">
+      <%= f.number_field :copas_vino_tinto %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :vasos_largos %>
-    <%= f.number_field :vasos_largos %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :copas_agua %>
+    </div>
 
-  <div class="field">
-    <%= f.label :vasos_para_whisky %>
-    <%= f.number_field :vasos_para_whisky %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :vasos_cerveceros %>
+    </div>
 
-  <div class="field">
-    <%= f.label :vasos_cockteleros %>
-    <%= f.number_field :vasos_cockteleros %>
+    <div class="col-lg-3">
+      <%= f.number_field :vasos_largos %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :ceniceros %>
-    <%= f.number_field :ceniceros %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :vasos_para_whisky %>
+    </div>
 
-  <div class="field">
-    <%= f.label :hieleras_con_pinzas %>
-    <%= f.number_field :hieleras_con_pinzas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :vasos_cockteleros %>
+    </div>
 
-  <div class="field">
-    <%= f.label :jarras_grandes %>
-    <%= f.number_field :jarras_grandes %>
+    <div class="col-lg-3">
+      <%= f.number_field :ceniceros %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :jarras_medianas %>
-    <%= f.number_field :jarras_medianas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :hieleras_con_pinzas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :jarras_pequenas %>
-    <%= f.number_field :jarras_pequenas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :jarras_grandes %>
+    </div>
 
-  <div class="field">
-    <%= f.label :charolas_rectangulares %>
-    <%= f.number_field :charolas_rectangulares %>
+    <div class="col-lg-3">
+      <%= f.number_field :jarras_medianas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :charolas_redondas %>
-    <%= f.number_field :charolas_redondas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :jarras_pequenas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :charolitas %>
-    <%= f.number_field :charolitas %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :charolas_rectangulares %>
+    </div>
 
-  <div class="field">
-    <%= f.label :platos_hondos_normales %>
-    <%= f.number_field :platos_hondos_normales %>
+    <div class="col-lg-3">
+      <%= f.number_field :charolas_redondas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :platos_planos_normales %>
-    <%= f.number_field :platos_planos_normales %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :charolitas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :platos_hondos_frances %>
-    <%= f.number_field :platos_hondos_frances %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :platos_hondos_normales %>
+    </div>
 
-  <div class="field">
-    <%= f.label :platos_planos_frances %>
-    <%= f.number_field :platos_planos_frances %>
+    <div class="col-lg-3">
+      <%= f.number_field :platos_planos_normales %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :platos_base_frances %>
-    <%= f.number_field :platos_base_frances %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :platos_hondos_frances %>
+    </div>
 
-  <div class="field">
-    <%= f.label :platillos_frances %>
-    <%= f.number_field :platillos_frances %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :platos_planos_frances %>
+    </div>
 
-  <div class="field">
-    <%= f.label :platillos_para_saladitos %>
-    <%= f.number_field :platillos_para_saladitos %>
+    <div class="col-lg-3">
+      <%= f.number_field :platos_base_frances %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :pescaderas %>
-    <%= f.number_field :pescaderas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :platillos_frances %>
+    </div>
 
-  <div class="field">
-    <%= f.label :tenedores_y_cuchillos %>
-    <%= f.number_field :tenedores_y_cuchillos %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :platillos_para_saladitos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :cucharas %>
-    <%= f.number_field :cucharas %>
+    <div class="col-lg-3">
+      <%= f.number_field :pescaderas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :cucharillas %>
-    <%= f.number_field :cucharillas %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :tenedores_y_cuchillos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :tenedor_torta %>
-    <%= f.number_field :tenedor_torta %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :cucharas %>
+    </div>
 
-  <div class="field">
-    <%= f.label :pirex %>
-    <%= f.number_field :pirex %>
+    <div class="col-lg-3">
+      <%= f.number_field :cucharillas %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :piezas_para_carne_o_ensalada %>
-    <%= f.number_field :piezas_para_carne_o_ensalada %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :tenedor_torta %>
+    </div>
 
-  <div class="field">
-    <%= f.label :cucharas_grandes %>
-    <%= f.number_field :cucharas_grandes %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :pirex %>
+    </div>
 
-  <div class="field">
-    <%= f.label :calentadores_de_comida %>
-    <%= f.number_field :calentadores_de_comida %>
+    <div class="col-lg-3">
+      <%= f.number_field :piezas_para_carne_o_ensalada %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :tazas_con_platillos %>
-    <%= f.number_field :tazas_con_platillos %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :cucharas_grandes %>
+    </div>
 
-  <div class="field">
-    <%= f.label :teteras %>
-    <%= f.number_field :teteras %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :calentadores_de_comida %>
+    </div>
 
-  <div class="field">
-    <%= f.label :azucareros %>
-    <%= f.number_field :azucareros %>
+    <div class="col-lg-3">
+      <%= f.number_field :tazas_con_platillos %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :espatula_para_torta %>
-    <%= f.number_field :espatula_para_torta %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :teteras %>
+    </div>
 
-  <div class="field">
-    <%= f.label :calentador_de_ambiente %>
-    <%= f.number_field :calentador_de_ambiente %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :azucareros %>
+    </div>
 
-  <div class="field">
-    <%= f.label :fuentes_para_bocaditos %>
-    <%= f.number_field :fuentes_para_bocaditos %>
+    <div class="col-lg-3">
+      <%= f.number_field :espatula_para_torta %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :fuentes_para_bufet %>
-    <%= f.number_field :fuentes_para_bufet %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :calentador_de_ambiente %>
+    </div>
 
-  <div class="field">
-    <%= f.label :toldo_16x8 %>
-    <%= f.number_field :toldo_16x8 %>
-  </div>
+    <div class="col-lg-3">
+      <%= f.number_field :fuentes_para_bocaditos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :laterales_por_metro %>
-    <%= f.number_field :laterales_por_metro %>
+    <div class="col-lg-3">
+      <%= f.number_field :fuentes_para_bufet %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :porta_cockey_de_cristal %>
-    <%= f.number_field :porta_cockey_de_cristal %>
-  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :toldo_16x8 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mesa_de_niños_con_sillitas_hiani_y_mantel_para_10_ninos %>
-    <%= f.number_field :mesa_de_niños_con_sillitas_hiani_y_mantel_para_10_ninos %>
+    <div class="col-lg-3">
+      <%= f.number_field :laterales_por_metro %>
+    </div>
+
+    <div class="col-lg-3">
+      <%= f.number_field :porta_cockey_de_cristal %>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-lg-3">
+      <%= f.number_field :mesa_de_niños_con_sillitas_hiani_y_mantel_para_10_ninos %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mesa_alta_de_bar_con_4_sillas_giratorias %>
-    <%= f.number_field :mesa_alta_de_bar_con_4_sillas_giratorias %>
+    <div class="col-lg-3">
+      <%= f.number_field :mesa_alta_de_bar_con_4_sillas_giratorias %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="actions">
+        <%= f.submit "Enviar Pedido", class: "btn btn-success btn-block" %>
+      </div>
+    </div>
   </div>
 <% end %>
