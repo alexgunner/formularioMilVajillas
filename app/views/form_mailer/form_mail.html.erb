@@ -1,0 +1,20 @@
+Estimado Yerko Suarez,
+
+esta es la información para la reserva con id <%=@reserva.id%>. <br> 
+
+<strong>Nombre: </strong><%= @reserva.nombre %><br>
+<strong>Telefono: </strong><%= @reserva.telefono %><br>
+<strong>Email: </strong><%= @reserva.correo %><br>
+<strong>Dirección: </strong><%= @reserva.direccion %><br><br><br>
+
+La proforma de reserva es la siguiente:
+<br><br>
+<% @reserva.attributes.each_pair do |item, valor| %>
+  <% if item != "nombre" &&  item != "direccion" && item != "telefono" && item != "correo" && item != "id" && valor != nil && item != "updated_at"%>
+  <% if item == "created_at" %>
+  		<strong>Creado en: <strong><%=valor%><br>
+  <% else %>
+  	<strong><%= item.humanize %>: <strong><%=valor%><br>
+  <% end %>
+  <% end %>
+<% end %>
