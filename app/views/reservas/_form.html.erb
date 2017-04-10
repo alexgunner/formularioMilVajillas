@@ -32,373 +32,248 @@
     <%= f.text_field :direccion , :placeholder => "Ingresa tu dirección. Intenta ser preciso", label: "Dirección" %>
   </div>
 
+  <div class="field">
+    <%= f.date_field :dia_evento , label: "Día del evento" %>
+  </div>
+
   <h3>Reserva de items</h3>
 
   <br><br>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sillas_plastica, :placeholder => "0" %>
+      <%= f.number_field :sillas_plastica, :placeholder => "0" , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :cubresillas_con_mona,:placeholder => "0" %>
+      <%= f.number_field :mesas_rectangulares_10_personas,:placeholder => "0" , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesas_rectangulares_10_personas,:placeholder => "0" %>
+      <%= f.number_field :manteles_rectangulares_10_personas, :placeholder => "0" , :min => "0" %>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :sobremanteles_rectangulares_10_personas, :placeholder => "0" , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :mesas_redondas_10_personas, :placeholder => "0" , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :manteles_redondos_10_personas, :placeholder => "0" , :min => "0" %>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :sobremanteles_redondos_10_personas, :placeholder => "0" , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :servilletas, :placeholder => "0" , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :sillitas_de_ninos, :placeholder => "0"  , :min => "0" %>
+    </div>
+    
+  </div>
+
+
+
+
+
+  <div class="row">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :mesita_de_ninos_4_ninos, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :sombrillas, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :toldos_12x8, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+  </div>
+
+  <div class="row">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :toldos_8x8, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :toldos_5x8, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :toldos_3x5, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :toldos_2x4, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :garzones, :placeholder => "0"  , :min => "0" %>
+    </div>
+   
+   
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :hieleras_con_pinzas, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+  </div>
+
+ 
+
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :copas_champagneras, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :copas_vino_blanco, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :copas_vino_tinto, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :manteles_rectangulares_10_personas, :placeholder => "0" %>
+      <%= f.number_field :copas_agua, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sobremanteles_rectangulares_10_personas, :placeholder => "0" %>
+      <%= f.number_field :vasos_cerveceros, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesas_redondas_10_personas, :placeholder => "0" %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :manteles_redondos_10_personas, :placeholder => "0" %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sobremanteles_redondos_10_personas, :placeholder => "0" %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesas_redondas_8_personas, :placeholder => "0" %>
+      <%= f.number_field :vasos_largos, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :manteles_redondos_8_personas, :placeholder => "0" %>
+      <%= f.number_field :vasos_para_whisky, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sobremanteles_rectangulares_8_personas, :placeholder => "0" %>
+      <%= f.number_field :vasos_cockteleros, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesas_rectangulares_6_personas, :placeholder => "0" %>
+      <%= f.number_field :ceniceros, :placeholder => "0"  , :min => "0" %>
+    </div>
+  </div>
+
+  <div class="row">
+    
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :jarras_grandes, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :jarras_medianas, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :jarras_pequenas, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :charolitas, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :platos_hondos_normales, :placeholder => "0"  , :min => "0" %>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <%= f.number_field :platos_planos_normales, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :manteles_rectangulares_6_personas, :placeholder => "0" %>
+      <%= f.number_field :platos_hondos_frances, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sobremanteles_rectangulares, :placeholder => "0" %>
+      <%= f.number_field :platos_planos_frances, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :servilletas, :placeholder => "0" %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesas_de_plastico_4_personas, :placeholder => "0" %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :manteles_4_personas, :placeholder => "0" %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesa_de_novios, :placeholder => "0" %>
+      <%= f.number_field :platos_base_frances, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesa_para_torta, :placeholder => "0" %>
+      <%= f.number_field :platillos_frances, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesitas_de_nino_8_ninos, :placeholder => "0"  %>
+      <%= f.number_field :platillos_para_saladitos, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mantelitos, :placeholder => "0"  %>
+      <%= f.number_field :pescaderas, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sillitas_de_ninos, :placeholder => "0"  %>
+      <%= f.number_field :tenedores_y_cuchillos, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :mesita_de_ninos_4_ninos, :placeholder => "0"  %>
+      <%= f.number_field :cucharas, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :sombrillas, :placeholder => "0"  %>
+      <%= f.number_field :cucharillas, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
+
+
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :toldos_12x8, :placeholder => "0"  %>
+      <%= f.number_field :cucharas_grandes, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :toldos_8x8, :placeholder => "0"  %>
+      <%= f.number_field :calentadores_de_comida, :placeholder => "0"  , :min => "0" %>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :toldos_5x8, :placeholder => "0"  %>
+      <%= f.number_field :tazas_con_platillos, :placeholder => "0"  , :min => "0" %>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :toldos_3x5, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :toldos_2x4, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :alfombra_roja, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :tarimas, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :parrillas_grandes, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :parrillas_pequenas, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :garzones, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :carroza, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :juegos_inflables, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :copas_champagneras, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :copas_vino_blanco, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :copas_vino_tinto, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :copas_agua, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :vasos_cerveceros, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :vasos_largos, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :vasos_para_whisky, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :vasos_cockteleros, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :ceniceros, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :hieleras_con_pinzas, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :jarras_grandes, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :jarras_medianas, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :jarras_pequenas, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :charolas_rectangulares, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :charolas_redondas, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :charolitas, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platos_hondos_normales, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platos_planos_normales, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platos_hondos_frances, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platos_planos_frances, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platos_base_frances, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platillos_frances, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :platillos_para_saladitos, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :pescaderas, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :tenedores_y_cuchillos, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :cucharas, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :cucharillas, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :tenedor_torta, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :pirex, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :piezas_para_carne_o_ensalada, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :cucharas_grandes, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :calentadores_de_comida, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :tazas_con_platillos, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :teteras, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :azucareros, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :espatula_para_torta, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :calentador_de_ambiente, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :fuentes_para_bocaditos, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :fuentes_para_bufet, :placeholder => "0"  %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :toldo_16x8, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :laterales_por_metro, :placeholder => "0"  %>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <%= f.number_field :porta_cockey_de_cristal, :placeholder => "0"  %>
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">

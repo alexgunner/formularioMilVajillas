@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170405165757) do
     t.string   "telefono"
     t.string   "correo"
     t.string   "direccion"
+    t.date     "dia_evento"
     t.integer  "sillas_plastica"
     t.integer  "cubresillas_con_mona"
     t.integer  "mesas_rectangulares_10_personas"

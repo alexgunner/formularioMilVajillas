@@ -5,6 +5,7 @@ class Reserva < ApplicationRecord
   validates :telefono, presence: true
   validates :correo, presence: true
   validates :direccion, presence: true
+  validates :dia_evento, presence: true
 
   # Length validations
   validates :nombre, length: { in: 3..50 }
@@ -15,4 +16,6 @@ class Reserva < ApplicationRecord
   # Type validations
   validates :telefono, numericality: { only_integer: true }
   validates_format_of :correo, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+
+
 end
