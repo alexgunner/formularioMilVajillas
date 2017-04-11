@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411165549) do
+ActiveRecord::Schema.define(version: 20170411173912) do
 
   create_table "reservas", force: :cascade do |t|
     t.string   "nombre"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20170411165549) do
     t.integer  "toldos_5x5"
     t.integer  "toldos_6x4"
     t.integer  "mesa_rectangular_4_personas"
+    t.integer  "jarras"
   end
 
 end
